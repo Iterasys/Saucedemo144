@@ -11,5 +11,8 @@
   "description": "",
   "devDependencies": {
     "playwright": "^1.51.1"
+  },
+  "dependencies": {
+    "saucedemo144": "file:"
   }
 }

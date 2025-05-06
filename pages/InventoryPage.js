@@ -4,7 +4,7 @@ class InventoryPage {
     constructor(page) {
         this.page = page;
         this.tituloSecao = page.locator('span.title')
-        this.mochila = page.locator('#item_4_title_link')
+        // this.mochila = page.locator('#item_4_title_link')
     }
 
     async verificarInventoryPage() {
@@ -12,8 +12,9 @@ class InventoryPage {
         await expect(this.tituloSecao).toHaveText('Products')
     }
 
-    async clicarMochila() {
-        await this.mochila.click()
+    async clicarProduto(sku) {
+        // await this.mochila.click()
+        this.page.locator(`#item_${sku}_title_link`).click()
     }
 }
 
